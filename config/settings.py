@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
+import django_heroku
 
 from pathlib import Path
 
@@ -137,3 +138,4 @@ LOGIN_REDIRECT_URL= 'home'
 LOGOUT_REDIRECT_URL= 'home'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+django_heroku.settings(locals())
